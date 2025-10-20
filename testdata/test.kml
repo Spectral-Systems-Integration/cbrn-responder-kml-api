@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>My Simple KML</name>
+    <description>A simple KML file with a single point placemark.</description>
+    <Placemark>
+      <name>Fictional Landmark</name>
+      <description>This is a placemark for a fictional landmark.</description>
+      <Point>
+        <coordinates>-122.083,37.422,0</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
