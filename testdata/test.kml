@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>My Simple KML</name>
+    <name>test.kml</name>
     <description>A simple KML file with a single point placemark.</description>
     <Placemark>
       <name>Fictional Landmark</name>
