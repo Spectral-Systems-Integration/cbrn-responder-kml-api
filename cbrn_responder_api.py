@@ -19,17 +19,12 @@ class cbrn_equipment_data_api(object):
   def upload_kml_cbrn_responder(self, kml_filename: str, 
           equipment_serial_number: str):
     
-    # get an updated access token before attempting to upload any KML files 
-    # ---------------------------------------------------------------------
+    # get an updated access token
+    # ---------------------------
     api_token = self.retrieve_access_token()
     if not api_token:
-      raise IOError(f'ERROR (fatal): invalid token: {api_token}. Exiting ...')
+      print(f'invalid token: {api_token}. Exiting ...')
       sys.exit(1)
-
-    # make sure that the KML file(s) do indeed exist on the file-system
-    # -----------------------------------------------------------------
-    if not os.path.isfile(kml_filename):
-      raise IOError(f'ERROR (fatal): not an exsiting file: {kml_filename}')
 
     # read contents of KML as base64
     # ------------------------------
@@ -43,30 +38,31 @@ class cbrn_equipment_data_api(object):
       # set up headers for request
       # --------------------------
       headers = {
-        'Authorization': f'Bearer {api_token}',
-        'Content-Type': 'application/vnd.google-earth.kml+xml'
+        'Authorization': f'Bearer {api_token}'
+        #'Content-Type': 'application/json'
       }
 
       # set up payload body
       # -------------------
       payload = {
-        "recordId": "",
-        "eventId": "",
         "equipmentSerialNumber": equipment_serial_number,
         "gisFiles": [{
+            "recordId": "930fde68-2d4e-5089-0000-111000000002",
+            # e.g. url:
+            #   https://www.cbrnresponder.net/app/index#event/1284200/details
+            "eventId": "1284200",
             "fileType": "kml",
             "name": "Test Upload KML",
             "files": [
                {
                   "name": kml_filename,
-                  "recordId": "",
+                  "recordId": "930fde68-2d4e-5089-0000-111000000003",
                   "data": kml_data
                }
             ]
         }]
       }
 
-      #payload = urlencode(payload)
       response = requests.post(cbrn_equipment_data_api.URL_EQUIPMENT_DATA_API, 
               headers = headers, data = payload)
     
@@ -103,16 +99,12 @@ class cbrn_equipment_data_api(object):
 
 def main():
 
-  # define variables that are specific to CBRN Responder event (Equipment Data API)
-  # -------------------------------------------------------------------------------
   api_client_application_secret = 'z8YYxY0Q3S9l3qAvZV17AnrA9r8enj83LBZrWh2u'
   client_id = '457143eb-c398-45a1-b563-be86c27e9a36'
   equipment_serial_number = '2024-001'
- 
-  # more parameters that may or not be needed
-  # -----------------------------------------
-  registration_code = 'uploaderkml'
-  registration_url = 'https://www.cbrnresponder.net/#equipment/register/uploaderkml'
+  
+  registration_code = 'uploaderkml' # not used
+  registration_url = 'https://www.cbrnresponder.net/#equipment/register/uploaderkml' # not used
 
   cbrn_api_body = {
     'grant_type': 'client_credentials&',
@@ -120,16 +112,10 @@ def main():
     'client_secret': api_client_application_secret 
   }
 
-  # define name of sample KML file in local directory
-  # -------------------------------------------------
-  kml_filename = 'testdata/test.kml'
+  kml_filename = 'test.kml'
+  #kml_filename = 'gfs.t00z.pgrb2.0p25.f000.wind_direction.850mb_wind_direction.kml'
 
-  # create a CBRN API object using client-class
-  # -------------------------------------------
   cbrn_ob = cbrn_equipment_data_api(cbrn_api_body)
-
-  # attempt to upload KML file
-  # --------------------------
   cbrn_ob.upload_kml_cbrn_responder(kml_filename, equipment_serial_number)
 
 if __name__ == '__main__':
