@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document ID="document_id">
+  <name>Aspect Status</name>
+  <open>1</open>
+ <Folder id="ftir_folder_id">
+  <name>FTIR Tracks</name>
+  <open>0</open>
+   <Placemark>
+      <name>20231212_161732_A.igm</name>
+      <visibility>1</visibility>
+      <Snippet maxLines="0"></Snippet>
+      <description>
+          <![CDATA[
+          <b><font size="+2">FTIR Track</font></b><br/><br/>
+          <table border="1" cellpadding="5">
+          <tr><td>File</td><td>$[name]</td></tr>
+          <tr><td>Pass</td><td>           0</td></tr>
+          <tr><td>Heading</td><td>10</td></tr>
+          <tr><td>Altitude</td><td>465 ft. AGL</td></tr>
+          <tr><td>Velocity</td><td>141 knots</td></tr>
+          <tr><td>Start Date</td><td>12 Dec 2023</td></tr>
+          <tr><td>Start Time</td><td>16:16:59</td></tr>
+          <tr><td>End Time</td><td>16:17:34</td></tr>
+          </table>]]>
+      </description>
+      <styleUrl>#msn_ftir_line</styleUrl>
+      <LineString>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <tessellate>1</tessellate>
+        <extrude>0</extrude>
+        <gx:drawOrder>2</gx:drawOrder>
+        <coordinates>
+-99.21230316,35.31665802,0
+-99.21066284,35.31875992,0
+-99.20927429,35.32100677,0
+-99.20844269,35.32346725,0
+-99.20821381,35.32605362,0
+-99.20819092,35.32866287,0
+-99.20820618,35.33127594,0
+-99.20824432,35.33389282,0
+-99.20824432,35.33650970,0
+-99.20820618,35.33847427,0
+        </coordinates>
+  </LineString>
+   </Placemark>
+   <Placemark>
+      <name>20231212_163407_A.igm</name>
+      <visibility>1</visibility>
+      <Snippet maxLines="0"></Snippet>
+      <description>
+          <![CDATA[
+          <b><font size="+2">FTIR Track</font></b><br/><br/>
+          <table border="1" cellpadding="5">
+          <tr><td>File</td><td>$[name]</td></tr>
+          <tr><td>Pass</td><td>           0</td></tr>
+          <tr><td>Heading</td><td>69</td></tr>
+          <tr><td>Altitude</td><td>468 ft. AGL</td></tr>
+          <tr><td>Velocity</td><td>140 knots</td></tr>
+          <tr><td>Start Date</td><td>12 Dec 2023</td></tr>
+          <tr><td>Start Time</td><td>16:34:00</td></tr>
+          <tr><td>End Time</td><td>16:34:35</td></tr>
+          </table>]]>
+      </description>
+      <styleUrl>#msn_ftir_line</styleUrl>
+      <LineString>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <tessellate>1</tessellate>
+        <extrude>0</extrude>
+        <gx:drawOrder>2</gx:drawOrder>
+        <coordinates>
+-99.20812988,35.33763123,0
+-99.20812225,35.34024048,0
+-99.20810699,35.34284592,0
+-99.20806885,35.34543610,0
+-99.20798492,35.34801102,0
+-99.20787811,35.35057068,0
+-99.20775604,35.35311890,0
+-99.20764923,35.35565567,0
+-99.20787811,35.35816956,0
+-99.20851898,35.35996628,0
+        </coordinates>
+  </LineString>
+   </Placemark>
+</Folder>
+<!-- FTIR Processng Completed in: 0.24 seconds -->
+  <StyleMap id="msn_ac_location">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#sn_ac_location</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#sh_ac_location</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="sn_ac_location">
+    <IconStyle>
+      <scale>1.1</scale>
+     <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href>
+      </Icon>
+      <heading>178</heading>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[
+          <b><font size="+2">$[name]</font></b>
+          <br/><br/>
+         $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FFFF0000</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <Style id="sh_ac_location">
+    <IconStyle>
+      <scale>1.3</scale>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/shapes/airports.png</href>
+      </Icon>
+      <heading>178</heading>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[
+          <b><font size="+2">$[name]</font></b>
+          <br/><br/>
+         $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FFFF0000</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <StyleMap id="msn_ac_track">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#sn_ac_track</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#sh_ac_track</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="sn_ac_track">
+    <IconStyle>
+      <scale>1.1</scale>
+     <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FFFF0000</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <Style id="sh_ac_track">
+    <IconStyle>
+      <scale>1.3</scale>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FFFF0000</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <StyleMap id="msn_gamma_line">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#sn_gamma_line</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#sh_gamma_line</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="sn_gamma_line">
+    <IconStyle>
+      <scale>1.1</scale>
+     <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FF0000FF</color>
+      <width>10</width>
+    </LineStyle>
+  </Style>
+  <Style id="sh_gamma_line">
+    <IconStyle>
+      <scale>1.3</scale>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FF0000FF</color>
+      <width>10</width>
+    </LineStyle>
+  </Style>
+  <StyleMap id="msn_ftir_line">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#sn_ftir_line</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#sh_ftir_line</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="sn_ftir_line">
+    <IconStyle>
+      <scale>1.1</scale>
+     <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FF00FF00</color>
+      <width>10</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>3300FF00</color>
+      <fill>1</fill>
+      <outline>0</outline>
+    </PolyStyle>
+  </Style>
+  <Style id="sh_ftir_line">
+    <IconStyle>
+      <scale>1.3</scale>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FF00FF00</color>
+      <width>10</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>330000FF</color>
+      <fill>1</fill>
+      <outline>0</outline>
+    </PolyStyle>
+  </Style>
+  <StyleMap id="msn_irls_line">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#sn_irls_line</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#sh_irls_line</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="sn_irls_line">
+    <IconStyle>
+      <scale>0.75</scale>
+     <Icon>
+        <href>http://www.epaaspect.net/googleearth/support/logos/icons/irls_class_yellow_p75.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FF00FF00</color>
+      <width>1</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>3300FFFF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+    <LabelStyle>
+      <color>00ffffff</color>
+    </LabelStyle>
+  </Style>
+  <Style id="sh_irls_line">
+    <IconStyle>
+      <scale>1.0</scale>
+      <Icon>
+        <href>http://www.epaaspect.net/googleearth/support/logos/icons/irls_class_yellow.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FF00FF00</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>7F00FFFF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+    <LabelStyle>
+      <color>ffffffff</color>
+    </LabelStyle>
+  </Style>
+  <StyleMap id="msn_nikon_line">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#sn_nikon_line</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#sh_nikon_line</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="sn_nikon_line">
+    <IconStyle>
+      <scale>0.75</scale>
+     <Icon>
+        <href>http://www.epaaspect.net/googleearth/support/logos/icons/camera_p5.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FFFF0000</color>
+      <width>1</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>33FF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+    <LabelStyle>
+      <color>00ffffff</color>
+    </LabelStyle>
+  </Style>
+  <Style id="sh_nikon_line">
+    <IconStyle>
+      <scale>1.00</scale>
+      <Icon>
+        <href>http://www.epaaspect.net/googleearth/support/logos/icons/camera_p75.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FFFF0000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>7FFF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+    <LabelStyle>
+      <color>ffffffff</color>
+    </LabelStyle>
+  </Style>
+  <StyleMap id="msn_msic_line">
+    <Pair>
+      <key>normal</key>
+      <styleUrl>#sn_msic_line</styleUrl>
+    </Pair>
+    <Pair>
+      <key>highlight</key>
+      <styleUrl>#sh_msic_line</styleUrl>
+    </Pair>
+  </StyleMap>
+  <Style id="sn_msic_line">
+    <IconStyle>
+      <scale>0.63</scale>
+     <Icon>
+        <href>http://www.epaaspect.net/googleearth/support/logos/icons/camera_p5.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FFFF0000</color>
+      <width>1</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>33FF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+    <LabelStyle>
+      <color>00ffffff</color>
+    </LabelStyle>
+  </Style>
+  <Style id="sh_msic_line">
+    <IconStyle>
+      <scale>0.87</scale>
+      <Icon>
+        <href>http://www.epaaspect.net/googleearth/support/logos/icons/camera_p75.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+          <bgColor>ffffffff</bgColor>
+          <text><![CDATA[ $[description]
+          <br/><br/>]]></text>
+    </BalloonStyle>
+    <LineStyle>
+      <color>FFFF0000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>7FFF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+    <LabelStyle>
+      <color>ffffffff</color>
+    </LabelStyle>
+  </Style>
+<!-- Processing the Aircraft Tracks -->
+ <Folder id="track_folder_id">
+  <name>Aircraft Track</name>
+  <open>0</open>
+  <Placemark>
+    <name>Aircraft Location at 16:38</name>
+    <Snippet maxLines="0">
+    </Snippet>
+    <description><![CDATA[
+         <table border="1" cellpadding="5">
+         <tr><td>Latitude</td> <td>35.347984</td></tr>
+         <tr><td>Longitude</td> <td>-99.232498</td></tr>
+         <tr><td>Heading</td> <td>178</td></tr>
+         <tr><td>Altitude</td> <td>1055 ft AGL</td></tr>
+         <tr><td>Velocity</td> <td>124 Knots</td></tr>
+         <tr><td>Date</td> <td>12/12/2023</td></tr>
+         <tr><td>Time</td> <td>16:38:23 UTC</td></tr>
+         <tr><td>Duration</td> <td>0:26</td></tr>
+         <tr><td>FTIR Files</td> <td>2</td></tr>
+         </table><br>
+      ]]></description>
+    <LookAt>
+      <longitude>-99.2324981689</longitude>
+      <latitude>35.3479843140</latitude>
+      <altitude>0</altitude>
+      <heading>1.48704364886113</heading>
+      <tilt>0</tilt>
+      <range>3655.387209405783</range>
+      <altitudeMode>relativeToGround</altitudeMode>
+    </LookAt>
+    <styleUrl>#msn_ac_location</styleUrl>
+    <Point>
+      <coordinates>-99.2324981689,35.3479843140,0</coordinates>
+    </Point>
+  </Placemark>
+   <Placemark>
+      <name>Aircraft Track</name>
+      <visibility>1</visibility>
+    <Snippet maxLines="0"></Snippet>
+      <description>
+          <![CDATA[
+          <b><font size="+2">$[name]</font></b><br/><br/>
+          <table border="1" cellpadding="5">
+          <tr><td>File</td><td>vn_20240725171316_gpsins.vnv</td></tr>
+          <tr><td>Start Date</td><td>12/12/2023</td></tr>
+          <tr><td>Start Time</td><td>16:11</td></tr>
+          <tr><td>Duration</td><td>0:26</td></tr>
+          </table>]]>
+      </description>
+    <styleUrl>#msn_ac_track</styleUrl>
+      <LineString>
+        <altitudeMode>clampedToGround</altitudeMode>
+        <tessellate>1</tessellate>
+        <extrude>0</extrude>
+        <gx:drawOrder>0</gx:drawOrder>
+        <coordinates>
+-99.21110535,35.29853821,0
+-99.20912170,35.30056381,0
+-99.20793152,35.30307007,0
+-99.20745087,35.30577469,0
+-99.20738983,35.30851364,0
+-99.20741272,35.31123734,0
+-99.20744324,35.31394196,0
+-99.20742798,35.31661987,0
+-99.20737457,35.31928635,0
+-99.20736694,35.32194138,0
+-99.20738983,35.32458878,0
+-99.20751190,35.32724380,0
+-99.20783997,35.32990646,0
+-99.20816040,35.33257675,0
+-99.20838928,35.33525467,0
+-99.20848083,35.33792114,0
+-99.20846558,35.34058380,0
+-99.20841980,35.34324265,0
+-99.20832825,35.34586716,0
+-99.20822144,35.34845734,0
+-99.20809174,35.35100174,0
+-99.20794678,35.35351562,0
+-99.20777893,35.35599899,0
+-99.20760345,35.35845947,0
+-99.20740509,35.36089325,0
+-99.20716858,35.36330795,0
+-99.20687866,35.36568832,0
+-99.20648956,35.36804962,0
+-99.20602417,35.37039566,0
+-99.20549011,35.37273026,0
+-99.20493317,35.37505341,0
+-99.20436096,35.37738419,0
+-99.20375061,35.37973022,0
+-99.20333099,35.38213348,0
+-99.20359039,35.38455582,0
+-99.20471191,35.38683701,0
+-99.20674133,35.38866806,0
+-99.20944214,35.38971710,0
+-99.21231079,35.38973999,0
+-99.21476746,35.38881683,0
+-99.21644592,35.38719559,0
+-99.21700287,35.38515472,0
+-99.21655273,35.38307953,0
+-99.21557617,35.38107681,0
+-99.21445465,35.37909698,0
+-99.21331024,35.37711334,0
+-99.21216583,35.37514114,0
+-99.21106720,35.37317657,0
+-99.21009827,35.37117767,0
+-99.20933533,35.36912918,0
+-99.20877075,35.36702347,0
+-99.20838928,35.36488342,0
+-99.20817566,35.36271286,0
+-99.20812225,35.36051941,0
+-99.20815277,35.35831833,0
+-99.20819092,35.35611343,0
+-99.20819855,35.35390854,0
+-99.20817566,35.35169983,0
+-99.20810699,35.34947968,0
+-99.20801544,35.34724045,0
+-99.20795441,35.34497070,0
+-99.20792389,35.34268570,0
+-99.20795441,35.34042740,0
+-99.20803833,35.33820343,0
+-99.20816803,35.33600616,0
+-99.20834351,35.33381653,0
+-99.20877075,35.33165359,0
+-99.20963287,35.32956696,0
+-99.21100616,35.32763672,0
+-99.21284485,35.32594681,0
+-99.21500397,35.32451248,0
+-99.21734619,35.32326126,0
+-99.21973419,35.32210159,0
+-99.22209930,35.32096863,0
+-99.22438812,35.31978607,0
+-99.22626495,35.31826401,0
+-99.22731781,35.31636810,0
+-99.22731781,35.31432343,0
+-99.22618866,35.31247711,0
+-99.22408295,35.31122971,0
+-99.22140503,35.31088638,0
+-99.21867371,35.31155777,0
+-99.21626282,35.31296158,0
+-99.21415710,35.31471252,0
+-99.21230316,35.31665802,0
+-99.21066284,35.31875992,0
+-99.20927429,35.32100677,0
+-99.20844269,35.32346725,0
+-99.20821381,35.32605362,0
+-99.20819092,35.32866287,0
+-99.20820618,35.33127594,0
+-99.20824432,35.33389282,0
+-99.20824432,35.33650970,0
+-99.20818329,35.33912659,0
+-99.20811462,35.34176254,0
+-99.20805359,35.34439850,0
+-99.20799255,35.34700012,0
+-99.20791626,35.34955215,0
+-99.20789337,35.35207748,0
+-99.20794678,35.35458374,0
+-99.20845032,35.35703659,0
+-99.20980835,35.35920334,0
+-99.21193695,35.36083221,0
+-99.21454620,35.36178970,0
+-99.21733856,35.36202240,0
+-99.21997070,35.36150360,0
+-99.22199249,35.36017990,0
+-99.22299957,35.35829544,0
+-99.22316742,35.35623550,0
+-99.22312164,35.35416412,0
+-99.22305298,35.35210419,0
+-99.22300720,35.35003281,0
+-99.22300720,35.34795380,0
+-99.22303772,35.34587097,0
+-99.22310638,35.34378815,0
+-99.22319794,35.34170151,0
+-99.22328949,35.33961487,0
+-99.22336578,35.33752823,0
+-99.22341919,35.33543396,0
+-99.22345734,35.33334351,0
+-99.22349548,35.33125305,0
+-99.22354889,35.32915497,0
+-99.22338867,35.32706833,0
+-99.22253418,35.32511902,0
+-99.22084808,35.32356262,0
+-99.21851349,35.32255936,0
+-99.21578217,35.32220459,0
+-99.21295166,35.32258987,0
+-99.21038818,35.32376862,0
+-99.20860291,35.32577896,0
+-99.20800018,35.32831573,0
+-99.20803070,35.33097458,0
+-99.20809937,35.33363724,0
+-99.20812988,35.33630371,0
+-99.20810699,35.33893967,0
+-99.20804596,35.34154892,0
+-99.20795441,35.34415817,0
+-99.20783234,35.34675598,0
+-99.20767975,35.34934235,0
+-99.20749664,35.35192490,0
+-99.20731354,35.35450363,0
+-99.20713043,35.35708237,0
+-99.20726776,35.35964966,0
+-99.20822906,35.36206818,0
+-99.21015167,35.36403656,0
+-99.21279144,35.36521530,0
+-99.21571350,35.36548996,0
+-99.21847534,35.36492920,0
+-99.22075653,35.36365509,0
+-99.22234344,35.36188126,0
+-99.22319031,35.35981750,0
+-99.22340393,35.35764694,0
+-99.22337341,35.35544968,0
+-99.22332001,35.35324478,0
+-99.22331238,35.35102081,0
+-99.22335052,35.34878922,0
+-99.22339630,35.34655380,0
+-99.22344208,35.34431076,0
+-99.22348022,35.34207153,0
+-99.22351837,35.33982849,0
+-99.22354889,35.33759689,0
+-99.22355652,35.33536911,0
+-99.22355652,35.33314896,0
+-99.22357941,35.33092499,0
+-99.22358704,35.32712173,0
+-99.22354889,35.32487488,0
+-99.22295380,35.32271576,0
+-99.22132111,35.32099533,0
+-99.21886444,35.32005692,0
+-99.21604156,35.31997681,0
+-99.21321869,35.32064438,0
+-99.21086884,35.32222748,0
+-99.20940399,35.32452774,0
+-99.20873260,35.32712555,0
+-99.20847321,35.32981491,0
+-99.20835114,35.33250046,0
+-99.20822906,35.33516312,0
+-99.20813751,35.33782578,0
+-99.20808411,35.34047699,0
+-99.20803833,35.34312439,0
+-99.20797729,35.34576416,0
+-99.20791626,35.34839249,0
+-99.20784760,35.35101700,0
+-99.20775604,35.35363770,0
+-99.20767975,35.35625076,0
+-99.20767975,35.35886383,0
+-99.20811462,35.36143875,0
+-99.20933533,35.36379623,0
+-99.21137238,35.36568832,0
+-99.21401978,35.36686325,0
+-99.21691132,35.36721039,0
+-99.21966553,35.36672974,0
+-99.22192383,35.36550140,0
+-99.22334290,35.36369705,0
+-99.22380829,35.36161041,0
+-99.22378540,35.35947037,0
+-99.22365570,35.35732269,0
+-99.22350311,35.35517502,0
+-99.22336578,35.35303497,0
+-99.22325897,35.35089874,0
+-99.22319794,35.34875870,0
+-99.22319031,35.34660721,0
+-99.22320557,35.34444427,0
+-99.22317505,35.34226227,0
+-99.22311401,35.34006500,0
+-99.22309875,35.33785629,0
+-99.22313690,35.33563232,0
+-99.22320557,35.33339691,0
+-99.22328186,35.33114624,0
+-99.22333527,35.32888412,0
+-99.22337341,35.32662201,0
+-99.22340393,35.32436371,0
+-99.22343445,35.32211304,0
+-99.22345734,35.31988907,0
+-99.22349548,35.31769943,0
+-99.22353363,35.31552505,0
+-99.22354889,35.31335449,0
+-99.22354889,35.31117630,0
+-99.22355652,35.30900192,0
+-99.22357178,35.30683899,0
+-99.22357941,35.30467224,0
+-99.22350311,35.30250168,0
+-99.22294617,35.30041122,0
+-99.22158813,35.29862595,0
+-99.21944427,35.29737854,0
+-99.21675110,35.29690552,0
+-99.21392059,35.29729080,0
+-99.21132660,35.29851151,0
+-99.20931244,35.30045319,0
+-99.20818329,35.30290604,0
+-99.20799255,35.30558777,0
+-99.20823669,35.30831909,0
+-99.20841217,35.31105804,0
+-99.20841217,35.31378937,0
+-99.20835876,35.31651306,0
+-99.20829010,35.31923676,0
+-99.20819092,35.32196808,0
+-99.20808411,35.32471085,0
+-99.20799255,35.32744598,0
+-99.20796204,35.33016586,0
+-99.20795441,35.33287048,0
+-99.20797729,35.33555984,0
+-99.20801544,35.33823395,0
+-99.20804596,35.34086990,0
+-99.20803070,35.34342194,0
+-99.20797729,35.34593201,0
+-99.20792389,35.34841919,0
+-99.20785522,35.35089111,0
+-99.20779419,35.35335159,0
+-99.20771790,35.35580826,0
+-99.20763397,35.35824585,0
+-99.20758820,35.36066818,0
+-99.20809174,35.36303329,0
+-99.20954132,35.36508179,0
+-99.21182251,35.36649704,0
+-99.21455383,35.36706161,0
+-99.21726990,35.36675262,0
+-99.21965027,35.36571884,0
+-99.22148132,35.36411667,0
+-99.22264099,35.36212921,0
+-99.22317505,35.35993958,0
+-99.22332764,35.35767746,0
+-99.22335815,35.35540009,0
+-99.22335052,35.35310364,0
+-99.22335052,35.35078812,0
+-99.22336578,35.34846497,0
+-99.22338104,35.34613037,0
+-99.22339630,35.34378815,0
+-99.22341156,35.34144592,0
+-99.22341919,35.33909607,0
+-99.22340393,35.33672714,0
+-99.22338104,35.33434296,0
+-99.22337341,35.33195114,0
+-99.22335052,35.32954788,0
+-99.22331238,35.32714844,0
+-99.22263336,35.32488251,0
+-99.22093201,35.32307434,0
+-99.21839905,35.32199860,0
+-99.21542358,35.32193375,0
+-99.21260071,35.32299042,0
+-99.21050262,35.32498932,0
+-99.20926666,35.32751083,0
+-99.20867920,35.33023834,0
+-99.20840454,35.33300781,0
+-99.20828247,35.33576965,0
+-99.20821381,35.33848572,0
+-99.20814514,35.34117889,0
+-99.20807648,35.34385300,0
+-99.20801544,35.34651566,0
+-99.20792389,35.34917068,0
+-99.20778656,35.35179901,0
+-99.20763397,35.35441971,0
+-99.20748138,35.35703659,0
+-99.20734406,35.35965347,0
+-99.20743561,35.36227798,0
+-99.20836639,35.36475754,0
+-99.21030426,35.36674881,0
+-99.21297455,35.36793900,0
+-99.21592712,35.36817169,0
+-99.21867371,35.36750412,0
+-99.22082520,35.36613846,0
+-99.22222137,35.36431122,0
+-99.22290802,35.36224747,0
+-99.22317505,35.36009979,0
+-99.22325134,35.35791779,0
+-99.22325134,35.35568619,0
+-99.22324371,35.35342789,0
+-99.22327423,35.35114288,0
+-99.22335052,35.34883881,0
+-99.22341156,35.34650803,0
+-99.22344971,35.34415054,0
+-99.22348022,35.34178162,0
+-99.22348785,35.33940506,0
+-99.22347260,35.33702850,0
+-99.22347260,35.33466339,0
+-99.22346497,35.33229446,0
+-99.22347260,35.32995224,0
+-99.22348022,35.32764435,0
+-99.22351074,35.32537079,0
+-99.22352600,35.32312775,0
+-99.22351837,35.32089996,0
+-99.22348785,35.31869888,0
+-99.22344208,35.31651688,0
+-99.22304535,35.31441116,0
+-99.22178650,35.31256104,0
+-99.21963501,35.31129837,0
+-99.21696472,35.31079865,0
+-99.21417999,35.31107330,0
+-99.21160889,35.31215286,0
+-99.20965576,35.31401062,0
+-99.20867157,35.31640625,0
+-99.20839691,35.31895447,0
+-99.20833588,35.32150269,0
+-99.20833588,35.32403183,0
+-99.20834351,35.32655716,0
+-99.20832825,35.32909775,0
+-99.20825195,35.33166122,0
+-99.20816803,35.33423996,0
+-99.20812988,35.33684540,0
+-99.20812225,35.33945465,0
+-99.20811462,35.34206390,0
+-99.20808411,35.34466171,0
+-99.20800781,35.34724045,0
+-99.20791626,35.34980392,0
+-99.20779419,35.35235596,0
+-99.20766449,35.35489655,0
+-99.20774841,35.35742569,0
+-99.20846558,35.35985184,0
+-99.21002960,35.36195374,0
+-99.21237183,35.36343002,0
+-99.21516418,35.36408997,0
+-99.21797943,35.36389160,0
+-99.22039795,35.36288452,0
+-99.22209167,35.36122894,0
+-99.22298431,35.35919189,0
+-99.22336578,35.35699081,0
+-99.22351074,35.35472488,0
+-99.22355652,35.35241699,0
+-99.22354126,35.35008621,0
+-99.22348785,35.34773636,0
+-99.22343445,35.34537506,0
+-99.22340393,35.34301376,0
+-99.22342682,35.34065247,0
+-99.22348022,35.33829117,0
+-99.22352600,35.33592987,0
+-99.22355652,35.33356476,0
+-99.22358704,35.33118057,0
+-99.22362518,35.32877350,0
+-99.22364807,35.32633972,0
+-99.22335815,35.32390976,0
+-99.22207642,35.32174683,0
+-99.21973419,35.32031250,0
+-99.21672821,35.31993484,0
+-99.21368408,35.32066727,0
+-99.21112823,35.32234955,0
+-99.20936584,35.32468033,0
+-99.20845795,35.32733536,0
+-99.20820618,35.33009338,0
+-99.20810699,35.33282089,0
+-99.20806885,35.33549118,0
+-99.20808411,35.33814240,0
+-99.20815277,35.34079742,0
+-99.20817566,35.34345627,0
+-99.20812988,35.34607315,0
+-99.20800018,35.34866714,0
+-99.20784760,35.35124588,0
+-99.20770264,35.35382080,0
+-99.20756531,35.35638428,0
+-99.20755768,35.35895538,0
+-99.20805359,35.36151505,0
+-99.20929718,35.36394501,0
+-99.21139526,35.36598206,0
+-99.21414185,35.36738205,0
+-99.21722412,35.36803818,0
+-99.22029877,35.36779022,0
+-99.22296143,35.36666107,0
+-99.22517395,35.36503220,0
+-99.22716522,35.36320877,0
+-99.22882843,35.36121368,0
+-99.23008728,35.35907364,0
+-99.23097229,35.35684586,0
+-99.23160553,35.35461426,0
+-99.23201752,35.35237122,0
+-99.23228455,35.35012436,0
+-99.23249817,35.34798431,0
+        </coordinates>
+  </LineString>
+</Placemark>
+</Folder>
+</Document>
+</kml>

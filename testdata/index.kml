@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <GroundOverlay>
+    <name>Plume Deposition Overlay - Gamma (R/h)</name>
+    <description> at Monday, September 15, 2025 at 4:00:00 AM</description>
+    <Icon>
+      <href>image.png</href>
+      <viewBoundScale>0.75</viewBoundScale>
+    </Icon>
+    <LatLonBox>
+      <north>39.15871682824276</north>
+      <south>38.676886497039447</south>
+      <east>-94.551853922970849</east>
+      <west>-95.103876902293351</west>
+    </LatLonBox>
+  </GroundOverlay>
+</kml>
