@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import os
 import yaml
+import shutil
+import time
 import glob
 import json
 import base64
@@ -132,13 +134,16 @@ class CBRNEquipmentDataAPI:
 
     # create payload hash object
     # --------------------------
+    name = os.path.basename(
+            file_path).lower().replace('.kml', '').replace('.kmz', '')
     payload = {
       "equipmentSerialNumber": equipment_serial_number,
       "gisFiles": [{
         "recordId": "930fde68-2d4e-5089-0000-111000000002",
         "eventId": event_id,
         "fileType": "kml",
-        "name": "KML Upload",
+        #"name": "KML Upload",
+        "name": name,
         "files": [{
           "name": file_name,
           "recordId": "930fde68-2d4e-5089-0000-111000000003",
@@ -277,11 +282,35 @@ def main():
   for kml_filename in kml_filenames:
     logger.info(f'uploading following KML: {kml_filename}')
 
+    # make temp. copy of KML file w/ unique timestamp to give
+    # it a unique name
+    # -------------------------------------------------------
+    outdir = os.path.dirname(kml_filename)
+    basename_kml = os.path.splitext(
+            os.path.basename(kml_filename))[0]
+    ts = str(time.time()).replace('.', '')
+
+    if kml_filename.endswith('.kml'):
+      extension = '.kml'
+    else:
+      extension = '.kmz'
+    
+    copy_kml_filename = os.path.join(outdir, 
+            f'{basename_kml}_{ts}{extension}')
+    if os.path.isfile(copy_kml_filename):
+      os.remove(copy_kml_filename)
+    
+    shutil.copyfile(kml_filename, copy_kml_filename)
+
+    # delay
+    # -----
+    time.sleep(1)
+
     # Upload KML and/or KMZ
     # ---------------------
     api.upload_kml_file(
-            kml_filename, equipment_serial_number, event_id)
-    break
+            copy_kml_filename, equipment_serial_number, event_id)
+    os.remove(copy_kml_filename)
 
 if __name__ == '__main__':
   main()
