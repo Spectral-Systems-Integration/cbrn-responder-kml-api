@@ -1,7 +1,8 @@
 ###### CBRN Responder KML/KMZ Uploader Code 
     
     This is a python program that is intended to be run on a UNIX and/or Linux (or similar)
-    command-line. It is intended to upload a set of KMLs and/or KMZs to the 
+    command-line. It is intended to upload a set of KMLs and/or KMZs to CBRN Responder via
+    an already-existing Equipment Data API. 
      
 ###### INSTALLATION and/or Pre-requisites:
 
