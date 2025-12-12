@@ -39,7 +39,12 @@
     (3) Equipment Serial number associated with existing CBRN Responder Equipment Data API
     (4) Client secret associated with existing CBRN Responder Equipment Data API
     (5) Client ID associated with existing CBRN Responder Equipment Data API
+   
+    To run the script, make sure 'config.yaml' and 'upload_kml.py' are in the SAME directory.
+    Then invoke python3:
     
+    $ python3 upload_kml.py
+ 
 ###### PYTHON VERSION:
      
     Supports Python 3.x
