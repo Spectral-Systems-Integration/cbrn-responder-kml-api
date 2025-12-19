@@ -1,6 +1,6 @@
 ---
 client_id: 457143eb-c398-45a1-b563-be86c27e9a36
-client_secret: <your_secret> 
+client_secret: <your_client_secret> 
 equipment_serial_number: 2024-001
-kml_file_dir: /home/gerasimos/Desktop/work/kalman_and_ssi/cbrn_responder_api/github_20251210/cbrn-responder-kml-api/testdata
+kml_file_dir: /home/gerasimos/Desktop/work/kalman_and_ssi/cbrn_responder_api/github_20251210/cbrn-responder-kml-api/rick_files
 event_id: 1284200

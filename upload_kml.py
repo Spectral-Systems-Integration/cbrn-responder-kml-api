@@ -122,7 +122,8 @@ class CBRNEquipmentDataAPI:
     # which is basically ASCII representation of binary
     # -------------------------------------------------
     logging.info('Preparing KML upload...')
-    kml_base64 = base64.b64encode(kml_content.encode('utf-8')).decode('utf-8')
+    kml_base64 = base64.b64encode(
+            kml_content.encode('utf-8')).decode('utf-8')
     logging.info(f'Base64 encoded size: {len(kml_base64)} characters')
 
     # Updated headers and JSON payload
@@ -131,19 +132,21 @@ class CBRNEquipmentDataAPI:
       'Authorization': f'Bearer {api_token}',
       'Content-Type': 'application/json'
     }
+   
+    # create unique name for KML/KMZ file upload
+    # ------------------------------------------
+    unique_name = os.path.basename(
+            file_path).lower().replace('.kml', '').replace('.kmz', '')
 
     # create payload hash object
     # --------------------------
-    name = os.path.basename(
-            file_path).lower().replace('.kml', '').replace('.kmz', '')
     payload = {
       "equipmentSerialNumber": equipment_serial_number,
       "gisFiles": [{
         "recordId": "930fde68-2d4e-5089-0000-111000000002",
         "eventId": event_id,
         "fileType": "kml",
-        #"name": "KML Upload",
-        "name": name,
+        "name": unique_name,
         "files": [{
           "name": file_name,
           "recordId": "930fde68-2d4e-5089-0000-111000000003",
@@ -183,16 +186,16 @@ class CBRNEquipmentDataAPI:
       file_list = zip_file.namelist()
       logging.info(f'KMZ contains {len(file_list)} file(s)')
 
-    # Find KML file in archive
-    # ------------------------
-    kml_files = [f for f in file_list if f.endswith('.kml')]
-    if not kml_files:
-      logging.error('No KML file found in KMZ archive')
-      sys.exit(1)
+      # Find KML file in archive
+      # ------------------------
+      kml_files = [f for f in file_list if f.endswith('.kml')]
+      if not kml_files:
+        logging.error('No KML file found in KMZ archive')
+        sys.exit(1)
 
-    kml_filename = kml_files[0]
-    kml_content = zip_file.read(kml_filename).decode('utf-8')
-    logging.info(f'Extracted {kml_filename} from KMZ ({len(kml_content)} bytes)')
+      kml_filename = kml_files[0]
+      kml_content = zip_file.read(kml_filename).decode('utf-8')
+      logging.info(f'Extracted {kml_filename} from KMZ ({len(kml_content)} bytes)')
     return kml_content, kml_filename
 
 def export_environment_variables():
@@ -288,7 +291,7 @@ def main():
     outdir = os.path.dirname(kml_filename)
     basename_kml = os.path.splitext(
             os.path.basename(kml_filename))[0]
-    ts = str(time.time()).replace('.', '')
+    ts = 't' + str(time.time()).replace('.', '')
 
     if kml_filename.endswith('.kml'):
       extension = '.kml'
@@ -308,8 +311,7 @@ def main():
 
     # Upload KML and/or KMZ
     # ---------------------
-    api.upload_kml_file(
-            copy_kml_filename, equipment_serial_number, event_id)
+    api.upload_kml_file(copy_kml_filename, equipment_serial_number, event_id)
     os.remove(copy_kml_filename)
 
 if __name__ == '__main__':
